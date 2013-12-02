@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gymcheckin" Class="GymCheckinDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=gymcheckin.mssql.somee.com;Initial Catalog=gymcheckin;Persist Security Info=True;User ID=joericlaes_SQLLogin_1" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="gymcheckinConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.gym_checkins" Member="gym_checkins">
+    <Type Name="gym_checkin">
+      <Column Name="checkin_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="checkin_userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="checkin_timestamp" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="checkin_userfirstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="gym_user_gym_checkin" Member="gym_user" ThisKey="checkin_userid" OtherKey="user_id" Type="gym_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_users" Member="tbl_users">
+    <Type Name="tbl_user">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_lastname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_tiwtter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_picture" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="user_password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fk_function_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_allowed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_user_tbl_checkin" Member="tbl_checkins" ThisKey="user_id" OtherKey="fk_user_id" Type="tbl_checkin" />
+      <Association Name="tbl_function_tbl_user" Member="tbl_function" ThisKey="fk_function_id" OtherKey="function_id" Type="tbl_function" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.gym_users" Member="gym_users">
+    <Type Name="gym_user">
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_twitter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_imagehash" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="gym_user_gym_checkin" Member="gym_checkins" ThisKey="user_id" OtherKey="checkin_userid" Type="gym_checkin" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_checkin" Member="tbl_checkins">
+    <Type Name="tbl_checkin">
+      <Column Name="checkin_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="checkin_datetime" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Association Name="tbl_user_tbl_checkin" Member="tbl_user" ThisKey="fk_user_id" OtherKey="user_id" Type="tbl_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_functions" Member="tbl_functions">
+    <Type Name="tbl_function">
+      <Column Name="function_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="function_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_function_tbl_user" Member="tbl_users" ThisKey="function_id" OtherKey="fk_function_id" Type="tbl_user" />
+    </Type>
+  </Table>
+</Database>
