@@ -11,9 +11,23 @@
     <div>
     
         <asp:LoginView ID="LoginView1" runat="server">
-          
+            <AnonymousTemplate>
 
-               
+                U MOET NOG INLOGGEN SLET !! link
+
+            </AnonymousTemplate>
+
+            <RoleGroups>
+                <asp:RoleGroup Roles="Admin">
+
+                </asp:RoleGroup>
+                <asp:RoleGroup Roles="Student">
+
+
+
+
+                </asp:RoleGroup>
+            </RoleGroups> 
 
         </asp:LoginView>
     

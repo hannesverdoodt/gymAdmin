@@ -27,14 +27,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div id="left">
-                        <asp:Chart ID="Chart1" runat="server">
-                            <Series>
-                                <asp:Series Name="Series1" ChartType="Line"></asp:Series>
-                            </Series>
-                            <ChartAreas>
-                                <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                            </ChartAreas>
-                        </asp:Chart>
+                       
                     </div>
                     <div id="right">
                         <p>Total Check-ins <span class="badge">42</span></p>
