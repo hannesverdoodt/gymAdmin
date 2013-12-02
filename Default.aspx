@@ -8,29 +8,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-        <asp:LoginView ID="LoginView1" runat="server">
-            <AnonymousTemplate>
+     <div id="wrapper69">
+            
+            <div class="page-header">
+                <h1>The Creativity Gym <small>#GymWithUs</small></h1>
+            </div>
+         
 
-                U MOET NOG INLOGGEN SLET !! link
-
-            </AnonymousTemplate>
-
-            <RoleGroups>
-                <asp:RoleGroup Roles="Admin">
-
-                </asp:RoleGroup>
-                <asp:RoleGroup Roles="Student">
+            <div>
 
 
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
 
 
-                </asp:RoleGroup>
-            </RoleGroups> 
+            </div>
 
-        </asp:LoginView>
-    
+
+
+
     </div>
     </form>
 </body>

@@ -1,0 +1,82 @@
+﻿body {
+}
+
+#wrapper69 {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content_thumbnail {
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.img-size {
+    height: 240px;
+    width: 300px;
+}
+
+#left {
+    float: left;
+    width: 320px;
+}
+
+#right {
+    float: left;
+    width: 635px;
+}
+
+.clear {
+clear: both;
+}
+
+#passwords {
+    clear: both;
+    margin-top: 50px;
+}
+
+#changeLeft {
+    float: left;
+    width: 470px;
+}
+
+#changeRight {
+    float: left;
+    width: 470px;
+}
+
+
+
+.pwright {
+    float: left;
+    width: 150px;
+    margin-top: 83px;
+}
+
+
+.pwright_2 {
+    float: left;
+    width: 150px;
+}
+
+.pwleft{
+    float: left;
+    width: 250px;
+}
+
+
+#btnChangeLastname {
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+}
+
+
+#btnLogin {
+    margin-top: -10px;
+    width: 194px;
+}
