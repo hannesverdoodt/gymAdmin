@@ -21,6 +21,19 @@
                 <asp:LoginStatus ID="LoginStatus1" runat="server" />
 
 
+                <br />
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <AnonymousTemplate>
+                        You are not logged in, Click the Login link to sign in!
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        You are logged in, welcome
+                        <asp:LoginName ID="LoginName1" runat="server" />
+                        !
+                    </LoggedInTemplate>
+                </asp:LoginView>
+
+
             </div>
 
 

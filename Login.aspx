@@ -21,21 +21,20 @@
               <h3> <small>Login</small></h3>
             </div>
 
-            <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label><br />
-            
+                    <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label><br />
+                    <asp:TextBox ID="txtUsername" runat="server" ToolTip="Username"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Required field" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label><br />
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ToolTip="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required field" ControlToValidate="txtPassword" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <br />
+                    <asp:Label ID="lblFeedback" runat="server"></asp:Label>
+                    <br />
+                    <asp:Button CssClass="btn" ID="btnLogin" runat="server" Text="Login" Width="224px" OnClick="btnLogin_Click" ValidationGroup="Login1" />
+                    <br />
 
-            <asp:TextBox ID="txtUsername" runat="server" ToolTip="Username"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Required field" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br />
-            <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label><br />
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ToolTip="Password"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required field" ControlToValidate="txtPassword" ForeColor="Red"></asp:RequiredFieldValidator>
-            <br />
-            <asp:Label ID="lblFeedback" runat="server"></asp:Label>
-            <br />
-            <asp:Button CssClass="btn" ID="btnLogin" runat="server" Text="Login" Width="224px" />
-            <br />
-          
         </div>
     </form>
 </body>
