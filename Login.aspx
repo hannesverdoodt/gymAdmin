@@ -21,6 +21,8 @@
               <h3> <small>Login</small></h3>
             </div>
 
+            <asp:Label></asp:Label>
+
             <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label><br />
             
 
