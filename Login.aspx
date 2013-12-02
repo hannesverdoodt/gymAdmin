@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <!DOCTYPE html>
 
@@ -20,8 +20,6 @@
             <div class="page-header">
               <h3> <small>Login</small></h3>
             </div>
-
-            <asp:Label></asp:Label>
 
             <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label><br />
             
