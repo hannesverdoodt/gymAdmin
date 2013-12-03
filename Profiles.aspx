@@ -20,10 +20,22 @@
             </div>
 
             <ul class="nav nav-tabs">
-              <li class="active"><a href="Profile2.aspx">Profile</a></li>
-              <li><a href="Statistics2.aspx">Statistics</a></li>
-              <li><a href="Users2.aspx">Users</a></li>
+              <li class="active"><a href="Profile.aspx">Profile</a></li>
+                <%
+                    if ((string)(System.Web.HttpContext.Current.Session["twitter"]) == "hannesverdoodt")
+                    {
+                        //Response.Write(System.Web.HttpContext.Current.Session["twitter"]);
+                       %>
+                            
+                            <li><a href="Statistics.aspx">Statistics</a></li>
+                            <li><a href="Users.aspx">Users</a></li>
+                               
+                   <% }
+                    
+                     %>
+                     
             </ul>
+
                    
             <div class="page-header">
               <h3> <small>Personal Data</small></h3>
@@ -34,8 +46,7 @@
                         <img class="img-size" src="Content/images/joeri6.PNG" alt="profile_img"/>
                     </div>
                     <div id="right">
-                        <asp:ListView ID="ListView1" runat="server">
-                        </asp:ListView>
+                        tetten
                     </div>
                 </div>
                 
@@ -47,24 +58,31 @@
                   <h3> <small>Change data</small></h3>
                 </div>
                 <div>
+                    <div>
 
+                        <br />
+                        <asp:Label ID="lblFeedback2" runat="server"></asp:Label>
+                        <br />
+
+                    </div>
 
                      <div id="changeLeft" class="input-group">
                         <div class="pwleft">
-                          <input type="text" class="form-control tekst" placeholder="Firstname"/><br />
+                          <input type="text" class="form-control" placeholder="Firstname"/><br />
                                 
-                          <input type="text" class="form-control tekst" placeholder="Lastname"/><br />
+                          <input type="text" class="tekstveld form-control" placeholder="Lastname"/><br />
                                 
-                          <input type="text" class="form-control tekst" placeholder="@Twittername"/><br />
+                          <input type="text" class="tekstveld form-control" placeholder="@Twittername"/><br />
                                 
                         </div>
+
                         <div class="pwright_2">
                           
                            <button id="btnChangeFirstname" class="btn btn-default" type="button">Change Firstname</button>
                            
                            <button id="btnChangeLastname" class="btn btn-default" type="button">Change Lastname</button>
                        
-                           <button id="btnChangeTwittername" class="btn btn-default" type="button">Change Twitter</button>
+                           <button id="btnChangeTwittername" class="btn btn-default" type="button"> Change Twitter </button>
                         </div>
 
                     </div>
@@ -74,11 +92,11 @@
 
                     <div id="changeRight" class="input-group">
                         <div class="pwleft">
-                          <input type="text" class="form-control tekst" placeholder="Old password"/><br />
+                          <input type="text" class="form-control" placeholder="Old password"/><br />
                
-                          <input type="text" class="form-control tekst" placeholder="New password"/><br />
+                          <input type="text" class="tekstveld form-control" placeholder="New password"/><br />
 
-                          <input type="text" class="form-control tekst" placeholder="Repeat new password"/><br />
+                          <input type="text" class="tekstveld form-control" placeholder="Repeat new password"/><br />
 
                         </div>
                         <div class="pwright">
@@ -91,11 +109,15 @@
 
 
                 </div>
+                
 
             </div>
            
            
+            <div id="space">
 
+
+            </div>
 
             
           

@@ -27,7 +27,8 @@
 
 #right {
     float: left;
-    width: 635px;
+    width: 250px;
+    margin-left: 30px;
 }
 
 .clear {
@@ -41,12 +42,13 @@ clear: both;
 
 #changeLeft {
     float: left;
-    width: 470px;
+    width: 450px;
+    margin-right: 30px;
 }
 
 #changeRight {
     float: left;
-    width: 470px;
+    width: 450px;
 }
 
 
@@ -54,13 +56,15 @@ clear: both;
 .pwright {
     float: left;
     width: 150px;
-    margin-top: 83px;
+    margin-top: 92px;
+    margin-left: 10px;
 }
 
 
 .pwright_2 {
     float: left;
-    width: 150px;
+    width: 130px;
+    margin-left: 10px;
 }
 
 .pwleft{
@@ -89,3 +93,17 @@ clear: both;
 
 }
 
+
+
+.tekstveld {
+    margin-top: 12px;
+
+}
+
+
+
+#space {
+    clear: both;
+    height: 40px;
+    
+}
