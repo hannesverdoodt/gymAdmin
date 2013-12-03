@@ -9,68 +9,64 @@ using System.Web;
 public class DALLogin
 {
 
-    /*
-     public GymCheckinDataContext dc = new GymCheckinDataContext();
+   public GymCheckinDataContext dc = new GymCheckinDataContext();
 
-    public void getUser(tbl_user p_user)
+  //  public List<tbl_user> getUser(user){
+         // Query to find the user
+   //     var query =
+     //       from u in dc.tbl_users
+       //     where u.user_tiwtter == user.user_tiwtter
+         //   where u.user_password == user.user_password
+           // select u;
+       // return u;
+    //}
+
+
+/*
+    public void getUser(tbl_user user)
     {
-        // Query the database to find the user
+        // Query to find the user
         var query =
             from u in dc.tbl_users
-            where u.user_tiwtter == p_user.user_tiwtter
-            where u.user_password == p_user.user_password
+            where u.user_tiwtter == user.user_tiwtter
+            where u.user_password == user.user_password
             select u;
-     try
-        {
+        
             List<tbl_user> x = query.ToList();
-   
-        // Check if user exists or doesn't exist
-
-       
-        if (x.Count > 0)
-        {
-      
-
-            if (p_user.fk_function_id == 1)
-            {
-                throw new Exception("1");
-            }
-            else if (p_user.fk_function_id == 2)
-            {
-                throw new Exception("2");
-            }
-            else if (p_user.fk_function_id == 3)
-            {
-                throw new Exception("3");
-               
-            }
-            else
-            {
-                throw new Exception("4");
-            }
-        }
-
-        else
-        {
-           throw new Exception("Wrong Twittername or password");
-        }
-
-       
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-          
-        }
-        
-        
-
+            
     }*/
 
-}
-     
-     
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 

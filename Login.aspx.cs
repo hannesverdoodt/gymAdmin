@@ -9,28 +9,63 @@ public partial class Login : System.Web.UI.Page
 {
 
     protected void btnLogin_Click(object sender, EventArgs e)
-    {/*
-          tbl_user user = new tbl_user();
-          BLLLogin blllogin = new BLLLogin();
-          user.user_tiwtter = txtUsername.Text;
-          user.user_password = txtPassword.Text;
+    {
+       
+       // string user = txtUsername.Text;
+       // string pw = txtPassword.Text;       
 
-
-        try
-        {
+       tbl_user user = new tbl_user();
+       BLLLogin blllogin = new BLLLogin();
+       user.user_tiwtter = txtUsername.Text;
+       user.user_password = txtPassword.Text;
+  
+            try{
             blllogin.getUser(user);
-            lblFeedback.Text = "U bent toegevoegd" + user ;
-        }
+            lblFeedback.Text = "U bent ingelogd " + user;
+            }
 
-        catch
-        {
-            lblFeedback.Text = "NIET GELUKT";
-        }
+            catch
+            {
+                lblFeedback.Text = "neie";
+            }
 
-    */}
 
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

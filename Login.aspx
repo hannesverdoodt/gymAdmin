@@ -23,21 +23,19 @@
 
                     <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label><br />
                     <asp:TextBox ID="txtUsername" runat="server" ToolTip="Username" ValidationGroup="Login1"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Required field" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Required field" ControlToValidate="txtUsername" ForeColor="Red" ValidationGroup="Login1"></asp:RequiredFieldValidator>
                     <br />
                     <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label><br />
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ToolTip="Password" ValidationGroup="Login1"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required field" ControlToValidate="txtPassword" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required field" ControlToValidate="txtPassword" ForeColor="Red" ValidationGroup="Login1"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                     <asp:Label ID="lblFeedback" runat="server"></asp:Label>
                     <br />
+                    <br />
                     <asp:Button CssClass="btn" ID="btnLogin" runat="server" Text="Login" Width="224px" OnClick="btnLogin_Click" ValidationGroup="Login1" />
                     <br />
-
         </div>
     </form>
-    <p>
-        btn linken aan fields en dan login inorde brengen!!!</p>
-</body>
+   </body>
 </html>

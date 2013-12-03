@@ -10,13 +10,13 @@ using System.Web;
 
 public class BLLLogin
 {
-/*
-   public DALLogin DALlogin = new DALLogin();
 
-    public void getUser(tbl_user p_user)
+    DALLogin DALlogin = new DALLogin();
+
+    public void getUser(tbl_user user)
     {
      
-        DALlogin.getUser(p_user);
+        DALlogin.getUser(user);
        
     }
 
@@ -24,6 +24,32 @@ public class BLLLogin
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
    DALticket DALticket = new DALticket();
 
@@ -53,6 +79,6 @@ public class BLLLogin
             i *= ((int)b + 1);
         }
         return string.Format("{0:x}", i - DateTime.Now.Ticks);
-*/
-}
 
+}
+*/

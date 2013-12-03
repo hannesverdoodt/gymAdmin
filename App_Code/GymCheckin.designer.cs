@@ -45,9 +45,9 @@ public partial class GymCheckinDataContext : System.Data.Linq.DataContext
   partial void Updatetbl_function(tbl_function instance);
   partial void Deletetbl_function(tbl_function instance);
   #endregion
-	
+
 	public GymCheckinDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["gymcheckinConnectionString"].ConnectionString, mappingSource)
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["gymcheckin"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
