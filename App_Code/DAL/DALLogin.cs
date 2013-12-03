@@ -9,65 +9,31 @@ using System.Web;
 public class DALLogin
 {
 
-   public GymCheckinDataContext dc = new GymCheckinDataContext();
+    public GymCheckinDataContext dc = new GymCheckinDataContext();
 
- public List<tbl_user> getUser(tbl_user user){
-         // Query to find the user
-         var query =
-            from u in dc.tbl_users
-            where u.user_tiwtter == user.user_tiwtter
-             where u.user_password == user.user_password
-            select u;
-        return query.ToList();
-    }
-
-
-
-
-/*
-    public void getUser(tbl_user user)
+    public List<tbl_user> getUser(tbl_user user)
     {
         // Query to find the user
         var query =
-            from u in dc.tbl_users
-            where u.user_tiwtter == user.user_tiwtter
-            where u.user_password == user.user_password
-            select u;
-        
-            List<tbl_user> x = query.ToList();
-            
-    }*/
+           from u in dc.tbl_users
+           where u.user_tiwtter == user.user_tiwtter
+           where u.user_password == user.user_password
+           select u;
 
-}  
+        List<tbl_user> x = query.ToList();
 
+        if (x.Count == 0)
+        {
+            throw new Exception("Twittername or Password is wrong");
+        }
+        else
+        {
+            return query.ToList();
 
+        }
+      }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 /*

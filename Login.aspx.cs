@@ -19,14 +19,23 @@ public partial class Login : System.Web.UI.Page
        user.user_tiwtter = txtUsername.Text;
        user.user_password = txtPassword.Text;
   
-            try{
+
+            try{        
             blllogin.getUser(user);
-            lblFeedback.Text = "U bent ingelogd " + user;
+            lblFeedback.Text = "succes";
+
+
+
+            System.Web.HttpContext.Current.Session["twitter"] = txtUsername.Text;
+            System.Web.HttpContext.Current.Session["password"] = txtPassword.Text;
+            Response.Redirect("Profiles.aspx");
+
+
             }
 
-            catch
+            catch (Exception)
             {
-                lblFeedback.Text = "neie";
+                lblFeedback.Text = "Please try again";
             }
 
 

@@ -10,5 +10,17 @@ public partial class Profiles : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+
+
+        if (System.Web.HttpContext.Current.Session["twitter"] == null && System.Web.HttpContext.Current.Session["password"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
+        else
+        {
+            var joske = System.Web.HttpContext.Current.Session["twitter"];
+            var mariek = System.Web.HttpContext.Current.Session["password"];
+        }
+
     }
 }
