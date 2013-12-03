@@ -60,29 +60,29 @@
                 <div>
                     <div>
 
-                        <br />
                         <asp:Label ID="lblFeedback2" runat="server"></asp:Label>
+                        <br />
                         <br />
 
                     </div>
 
                      <div id="changeLeft" class="input-group">
                         <div class="pwleft">
-                          <input type="text" class="form-control" placeholder="Firstname"/><br />
+                          <asp:TextBox runat="server" type="text" class="form-control" placeholder="Firstname" id="txtFirstname"/><br />
                                 
-                          <input type="text" class="tekstveld form-control" placeholder="Lastname"/><br />
+                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Lastname" id="txtLastname"/><br />
                                 
-                          <input type="text" class="tekstveld form-control" placeholder="@Twittername"/><br />
+                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="@Twittername" id="txtTwitter"/><br />
                                 
                         </div>
 
                         <div class="pwright_2">
                           
-                           <button id="btnChangeFirstname" class="btn btn-default" type="button">Change Firstname</button>
+                           <asp:Button runat="server" id="btnChangeFirstname" CSSclass="btn btn-default" type="button" onclick="btnChangeFirstname_Click" Text="Change Firstname"></asp:Button>
                            
-                           <button id="btnChangeLastname" class="btn btn-default" type="button">Change Lastname</button>
+                           <asp:Button runat="server" id="btnChangeLastname" class="btn btn-default" type="button" onclick="btnChangeLastname_Click" Text="Change Lastname"></asp:Button>
                        
-                           <button id="btnChangeTwittername" class="btn btn-default" type="button"> Change Twitter </button>
+                           <asp:Button runat="server" id="btnChangeTwittername" class="btn btn-default" type="button" onclick="btnChangeTwitter_Click" Text=" Change Twitter "></asp:Button>
                         </div>
 
                     </div>
@@ -92,15 +92,15 @@
 
                     <div id="changeRight" class="input-group">
                         <div class="pwleft">
-                          <input type="text" class="form-control" placeholder="Old password"/><br />
+                          <asp:TextBox runat="server" type="text" class="form-control" placeholder="Old password"/><br />
                
-                          <input type="text" class="tekstveld form-control" placeholder="New password"/><br />
+                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="New password"/><br />
 
-                          <input type="text" class="tekstveld form-control" placeholder="Repeat new password"/><br />
+                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Repeat new password"/><br />
 
                         </div>
                         <div class="pwright">
-                           <button id="btnPW" class="btn btn-default" type="button">Change password</button>
+                           <asp:Button runat="server" id="btnPW" class="btn btn-default" type="button" Text="Change password"></asp:Button>
                         </div>
 
                     </div>

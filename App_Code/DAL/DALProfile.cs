@@ -4,14 +4,25 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Summary description for BLLProfile
+/// Summary description for DALProfile
 /// </summary>
-public class BLLProfile
+public class DALProfile
 {
-	public BLLProfile()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+
+    public GymCheckinDataContext dc = new GymCheckinDataContext();
+
+    public List<tbl_user> getContent(tbl_user gebruiker)
+    {
+
+        var query =
+            from g in dc.tbl_users
+            where g.user_tiwtter == gebruiker.user_tiwtter
+            where g.user_password == gebruiker.user_password
+            select g;
+        return query.ToList();
+
+    }
+
+
+
 }

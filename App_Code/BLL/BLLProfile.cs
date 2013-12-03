@@ -8,10 +8,16 @@ using System.Web;
 /// </summary>
 public class BLLProfile
 {
-	public BLLProfile()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+
+    DALProfile dalprofile = new DALProfile();
+
+    public List<tbl_user> getContent(tbl_user gebruiker)
+    {
+
+        return dalprofile.getContent(gebruiker);
+    
+    }
+
+
+
 }
