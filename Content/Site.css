@@ -1,0 +1,109 @@
+﻿@font-face {
+    font-family: "DS-Digital";
+    src: url(fonts/DS-DIGIB.TTF);
+}
+
+#user {
+    text-align: center;
+    width:180px;
+    height: 340px;
+    position: absolute;
+    right: 185px;
+    top: 140px;
+    float: right;
+    
+}
+
+#txtFirstname {
+    visibility: hidden;
+}
+
+#txtUserid {
+    font-size:1.9rem;
+    font-family: "DS-Digital";
+    color: #333d1e;
+}
+
+#firstname{
+    visibility:hidden;
+}
+
+#tv {
+    width: 1500px;
+    position: absolute;
+    height: 880px;
+    background-image: url("images/tv.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    margin-left: -300px;
+}
+
+#webcam, #imageholder {
+    z-index: -1;
+    position: relative;
+    margin-top:110px;
+    margin-left:-80px;
+}
+
+.snap {
+    background-size: cover;
+    background-image: url("images/background.jpg");
+    background-position: center center;
+}
+
+#topText {
+    font-family: 'Trocchi', serif;
+    font-size:62px;
+    color:white;
+    margin: 0 auto;
+    text-align:center;
+    background: #d15732;
+    height: 80px;
+    padding-top: 40px;
+    padding-bottom:0px;
+    opacity: 0.85;
+}
+
+.black {
+    color: #333d1e;
+}
+
+.container {
+    margin-top: 0px;
+}
+
+.containerform {
+    background: white;
+    padding:50px;
+    margin:0 auto;
+    margin-top:0;
+    width:650px;
+}
+
+.containerall {
+    background: white;
+    padding:50px;
+    margin:0 auto;
+    margin-top:0%;
+    width:70%;
+}
+
+#txtHash, #txtTid {
+    visibility: hidden;
+}
+
+#btnSnap, #btnRegister {
+    position: absolute;
+    right:190px;
+    bottom:190px;
+    width: 163px;
+    height: 163px;
+    background: url("images/snap.png");
+    border: none;
+}
+
+#btnRegister {
+    bottom: 380px;
+}
+

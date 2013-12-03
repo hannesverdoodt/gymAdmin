@@ -18,8 +18,8 @@ public partial class Profiles : System.Web.UI.Page
         }
         else
         {
-            var joske = System.Web.HttpContext.Current.Session["twitter"];
-            var mariek = System.Web.HttpContext.Current.Session["password"];
+            var twit = System.Web.HttpContext.Current.Session["twitter"];
+            var pasw = System.Web.HttpContext.Current.Session["password"];
         }
 
     }

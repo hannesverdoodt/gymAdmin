@@ -20,15 +20,10 @@
          
 
             <div>
-
-
-                <asp:LoginStatus ID="LoginStatus1" runat="server" />
-
-
-                <br />
+            
                 <asp:LoginView ID="LoginView1" runat="server">
                     <AnonymousTemplate>
-                        You are not logged in, Click the Login link to sign in!
+                          <a href="Register.aspx">Register</a> or <asp:LoginStatus ID="LoginStatus1" runat="server" />
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         You are logged in, welcome

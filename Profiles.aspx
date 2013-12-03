@@ -51,29 +51,34 @@
 
                      <div id="changeLeft" class="input-group">
                         <div class="pwleft">
-                          <input type="text" class="form-control" placeholder="Firstname"/><br />
-
-                          <input type="text" class="form-control" placeholder="Lastname"/><br />
-               
-                          <input type="text" class="form-control" placeholder="@Twittername"/><br />
-                    
+                          <input type="text" class="form-control tekst" placeholder="Firstname"/><br />
+                                
+                          <input type="text" class="form-control tekst" placeholder="Lastname"/><br />
+                                
+                          <input type="text" class="form-control tekst" placeholder="@Twittername"/><br />
+                                
                         </div>
                         <div class="pwright_2">
+                          
                            <button id="btnChangeFirstname" class="btn btn-default" type="button">Change Firstname</button>
+                           
                            <button id="btnChangeLastname" class="btn btn-default" type="button">Change Lastname</button>
+                       
                            <button id="btnChangeTwittername" class="btn btn-default" type="button">Change Twitter</button>
                         </div>
 
                     </div>
 
 
+
+
                     <div id="changeRight" class="input-group">
                         <div class="pwleft">
-                          <input type="text" class="form-control" placeholder="Old password"/><br />
+                          <input type="text" class="form-control tekst" placeholder="Old password"/><br />
                
-                          <input type="text" class="form-control" placeholder="New password"/><br />
+                          <input type="text" class="form-control tekst" placeholder="New password"/><br />
 
-                          <input type="text" class="form-control" placeholder="Repeat new password"/><br />
+                          <input type="text" class="form-control tekst" placeholder="Repeat new password"/><br />
 
                         </div>
                         <div class="pwright">

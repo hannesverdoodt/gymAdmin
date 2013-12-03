@@ -5,6 +5,7 @@
     width: 960px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
 }
 
 #content_thumbnail {
@@ -87,3 +88,4 @@ clear: both;
     font-family:Arial;
 
 }
+
