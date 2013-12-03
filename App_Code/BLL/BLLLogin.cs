@@ -13,12 +13,12 @@ public class BLLLogin
 
     DALLogin DALlogin = new DALLogin();
 
-    public void getUser(tbl_user user)
+    public List<tbl_user> getUser(tbl_user user) 
     {
-     
-        DALlogin.getUser(user);
-       
+        return DALlogin.getUser(user);
     }
+
+
 
 }
 

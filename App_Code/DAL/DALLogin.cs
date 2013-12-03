@@ -11,15 +11,17 @@ public class DALLogin
 
    public GymCheckinDataContext dc = new GymCheckinDataContext();
 
-  //  public List<tbl_user> getUser(user){
+ public List<tbl_user> getUser(tbl_user user){
          // Query to find the user
-   //     var query =
-     //       from u in dc.tbl_users
-       //     where u.user_tiwtter == user.user_tiwtter
-         //   where u.user_password == user.user_password
-           // select u;
-       // return u;
-    //}
+         var query =
+            from u in dc.tbl_users
+            where u.user_tiwtter == user.user_tiwtter
+             where u.user_password == user.user_password
+            select u;
+        return query.ToList();
+    }
+
+
 
 
 /*
