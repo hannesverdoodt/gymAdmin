@@ -8,6 +8,8 @@ using System.Web;
 /// </summary>
 public class DALLogin
 {
+
+    /*
      public GymCheckinDataContext dc = new GymCheckinDataContext();
 
     public void getUser(tbl_user p_user)
@@ -64,9 +66,11 @@ public class DALLogin
         
         
 
-    }
+    }*/
 
 }
+     
+     
 
 /*
 

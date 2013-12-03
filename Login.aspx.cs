@@ -7,16 +7,13 @@ using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
 
-    }
     protected void btnLogin_Click(object sender, EventArgs e)
-    {
-        tbl_user user = new tbl_user();
-        BLLLogin blllogin = new BLLLogin();
-  //      user.user_tiwtter = txtUsername.Text;
-  //      user.user_password = txtPassword.Text;
+    {/*
+          tbl_user user = new tbl_user();
+          BLLLogin blllogin = new BLLLogin();
+          user.user_tiwtter = txtUsername.Text;
+          user.user_password = txtPassword.Text;
 
 
         try
@@ -29,6 +26,12 @@ public partial class Login : System.Web.UI.Page
         {
             lblFeedback.Text = "NIET GELUKT";
         }
+
+    */}
+
+
+}
+
 
 
 /*
@@ -77,8 +80,3 @@ public partial class Login : System.Web.UI.Page
             lblStatus.CssClass = "alert alert-danger";
 
         }*/
-    }
-
-
-}
-
