@@ -20,14 +20,14 @@
             </div>
 
             <ul class="nav nav-tabs">
-              <li class="active"><a href="Profile.aspx">Profile</a></li>
+              <li class="active"><a href="Profile.aspx">Profile </a></li>
                 <%
-                    if ((string)(System.Web.HttpContext.Current.Session["twitter"]) == "goodbytes")
+                    if ((string)(System.Web.HttpContext.Current.Session["twitter"]) == "goodbytes" || (string)(System.Web.HttpContext.Current.Session["twitter"]) == "hannesverdoodt")
                     {
                         //Response.Write(System.Web.HttpContext.Current.Session["twitter"]);
                        %>
                             
-                            <li><a href="Statistics.aspx">Statistics</a></li>
+                            <!--<li><a href="Statistics.aspx">Statistics</a></li>-->
                             <li><a href="Users.aspx">Users</a></li>
                                
                    <% }
@@ -38,7 +38,7 @@
 
                    
             <div class="page-header">
-              <h3> <small>Personal Data</small></h3>
+              <h3> <small>Personal Data <a href="Default.aspx"> - Logout</a></small></h3>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body">

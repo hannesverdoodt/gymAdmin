@@ -19,12 +19,12 @@
             </div>     
             <ul class="nav nav-tabs">
               <li><a href="Profile.aspx">Profile</a></li>
-              <li><a href="Statistics.aspx">Statistics</a></li>
+             <!-- <li><a href="Statistics.aspx">Statistics</a></li>-->
               <li class="active"><a href="Users.aspx">Users</a></li>
             </ul>
               
             <div class="page-header">
-                <h3> <small>Requests</small></h3>
+                <h3> <small>Requests <a href="Default.aspx"> - Logout</a></small></h3>
             </div>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
