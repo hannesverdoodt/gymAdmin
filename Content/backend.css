@@ -107,3 +107,10 @@ clear: both;
     height: 40px;
     
 }
+
+
+
+#btnChangePasword {
+    clear: left;
+   margin-top: 46px;
+}

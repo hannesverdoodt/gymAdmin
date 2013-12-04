@@ -10,6 +10,7 @@ public class BLLChange
 {
     DALChange dalchange = new DALChange();
 
+    // FIRSTNAME
 
     public void newFirst(tbl_user p_first)
     {
@@ -17,9 +18,19 @@ public class BLLChange
     }
 
 
+    // LASTNAME
+
     public void newLast(tbl_user p_last)
     {
         dalchange.newLast(p_last);
+    }
+
+
+    // TWITTER
+
+    public void newPass(tbl_user p_pass)
+    {
+        dalchange.newPass(p_pass);
     }
 
 	

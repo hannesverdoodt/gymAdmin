@@ -12,6 +12,13 @@ public class DALChange
     public GymCheckinDataContext dc = new GymCheckinDataContext();
 
 
+
+
+
+
+    // UPDATE FIRSTNAME
+
+
     public void newFirst(tbl_user p_First)
     {
         // find row to update
@@ -44,6 +51,15 @@ public class DALChange
 
 
     }
+
+
+
+
+
+
+
+
+    // UPDATE LASTNAME
 
 
 
@@ -84,47 +100,52 @@ public class DALChange
 
 
 
-}
 
 
 
 
-/*
 
-   public void update(BORRIAS_Ticket p_ticket)
+    // UPDATE PASSWORD
+
+
+
+    public void newPass(tbl_user p_pass)
     {
-        // Query the database for the row to be updated.
+        // find row to update
         var query =
-            from t in dc.BORRIAS_Tickets
-            where t.code == p_ticket.code
-            select t;
+            from f in dc.tbl_users
+            where f.user_tiwtter == p_pass.user_tiwtter
+            select f;
 
-        List<BORRIAS_Ticket> x = query.ToList();
 
-        // Execute the query, and change the column values
-        // you want to change.
-        if (x.Count > 0)
+        List<tbl_user> x = query.ToList();
+
+        //update
+
+        foreach (tbl_user person in query)
         {
-            foreach (BORRIAS_Ticket ticket in query)
-            {
-                ticket.used = 1;
-            }
+            person.user_password = p_pass.user_password;
         }
-        else
-        {
-            throw new Exception("Code niet gevonden");
-        }
-        // Submit the changes to the database.
+
         try
         {
             dc.SubmitChanges();
         }
+
         catch (Exception e)
         {
             Console.WriteLine(e);
             // Provide for exceptions.
         }
 
-    } 
 
-*/
+    }
+
+
+
+
+
+
+
+}
+

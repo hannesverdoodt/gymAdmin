@@ -72,7 +72,9 @@
                                 
                           <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Lastname" id="txtLastname"/><br />
                                 
-                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="@Twittername" id="txtTwitter"/><br />
+                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Password" id="txtPassword" TextMode="Password"/><br />
+
+                           <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Retype password" id="txtPasswordCheck" TextMode="Password"/><br />
                                 
                         </div>
 
@@ -82,25 +84,7 @@
                            
                            <asp:Button runat="server" id="btnChangeLastname" class="btn btn-default" type="button" onclick="btnChangeLastname_Click" Text="Change Lastname"></asp:Button>
                        
-                           <asp:Button runat="server" id="btnChangeTwittername" class="btn btn-default" type="button" onclick="btnChangeTwitter_Click" Text=" Change Twitter "></asp:Button>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div id="changeRight" class="input-group">
-                        <div class="pwleft">
-                          <asp:TextBox runat="server" type="text" class="form-control" placeholder="Old password"/><br />
-               
-                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="New password"/><br />
-
-                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Repeat new password"/><br />
-
-                        </div>
-                        <div class="pwright">
-                           <asp:Button runat="server" id="btnPW" class="btn btn-default" type="button" Text="Change password"></asp:Button>
+                           <asp:Button runat="server" id="btnChangePasword" class="btn btn-default" type="button" onclick="btnChangePassword_Click" Text=" Change Password "></asp:Button>
                         </div>
 
                     </div>
