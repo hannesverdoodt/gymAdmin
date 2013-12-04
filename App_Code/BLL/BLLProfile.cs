@@ -11,10 +11,10 @@ public class BLLProfile
 
     DALProfile dalprofile = new DALProfile();
 
-    public List<tbl_user> getContent(tbl_user gebruiker)
+    public List<tbl_user> getURL(tbl_user gebruiker)
     {
 
-        return dalprofile.getContent(gebruiker);
+        return dalprofile.getURL(gebruiker);
     
     }
 
