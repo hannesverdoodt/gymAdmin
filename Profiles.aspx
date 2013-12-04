@@ -43,10 +43,10 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div id="left">
-                        <img class="img-size" src="Content/images/joeri6.PNG" alt="profile_img"/>
+                        <img class="img-size" src="#" alt="profile_img"/>
                     </div>
                     <div id="right">
-                        tetten
+                        <%= (Context.Items["imgURL"]) %>
                     </div>
                 </div>
                 

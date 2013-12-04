@@ -36,7 +36,7 @@ public partial class Profiles : System.Web.UI.Page
         try
         {
             bllprofile.getContent(gebruiker);
-
+            HttpContext.Current.Items["imgURL"] = gebruiker.user_picture.ToString();
         }
 
         catch (Exception)
