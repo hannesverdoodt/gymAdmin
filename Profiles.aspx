@@ -22,7 +22,7 @@
             <ul class="nav nav-tabs">
               <li class="active"><a href="Profile.aspx">Profile</a></li>
                 <%
-                    if ((string)(System.Web.HttpContext.Current.Session["twitter"]) == "hannesverdoodt")
+                    if ((string)(System.Web.HttpContext.Current.Session["twitter"]) == "goodbytes")
                     {
                         //Response.Write(System.Web.HttpContext.Current.Session["twitter"]);
                        %>
@@ -43,11 +43,62 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div id="left">
-                        <img class="img-size" src="#" alt="profile_img"/>
+
+                        <asp:DataList ID="DataList3" runat="server" DataSourceID="LinqDataSource3">
+                            <ItemTemplate>
+
+                        <asp:Image runat="server" ImageUrl='<%#Eval("user_picture") %>' ID="user_pictureImage" Width="320" />
+                            </ItemTemplate>
+                            </asp:DataList>
                     </div>
+
+                    <asp:LinqDataSource ID="LinqDataSource3" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_picture)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
+                                <WhereParameters>
+                                    <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
+                                </WhereParameters>
+                            </asp:LinqDataSource>
+
+
                     <div id="right">
-                        
-                        hier moet de naam komen (voor + achternaam)</div>
+                        <h4>
+                        <asp:DataList ID="DataList1" runat="server" DataSourceID="LinqDataSource1">
+                            <ItemTemplate>
+                                &nbsp;<asp:Label ID="user_firstnameLabel" runat="server" Text='<%# Eval("user_firstname") %>' />
+&nbsp;<asp:Label ID="user_lastnameLabel" runat="server" Text='<%# Eval("user_lastname") %>' />
+                                <br />
+                                <br />
+                            </ItemTemplate>
+                        </asp:DataList>
+                        </h4>
+                        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_firstname, user_lastname)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
+                            <WhereParameters>
+                                <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
+                            </WhereParameters>
+                        </asp:LinqDataSource>
+
+                        <h5>
+
+
+
+                            <asp:DataList ID="DataList2" runat="server" DataSourceID="LinqDataSource2">
+                                <ItemTemplate>
+                                    @<asp:Label ID="user_tiwtterLabel" runat="server" Text='<%# Eval("user_tiwtter") %>' />
+                                    <br />
+<br />
+                                </ItemTemplate>
+                            </asp:DataList>
+                            <asp:LinqDataSource ID="LinqDataSource2" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_tiwtter)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
+                                <WhereParameters>
+                                    <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
+                                </WhereParameters>
+                            </asp:LinqDataSource>
+                            
+
+
+
+                        </h5>
+
+                    </div>
                 </div>
                 
             </div>
