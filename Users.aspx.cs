@@ -13,6 +13,8 @@ public partial class Users : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        Response.AppendHeader("refresh", "10");
+
         if (System.Web.HttpContext.Current.Session["twitter"] == null && System.Web.HttpContext.Current.Session["password"] == null)
         {
             Response.Redirect("Login.aspx");

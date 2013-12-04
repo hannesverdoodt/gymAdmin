@@ -60,43 +60,50 @@
 
 
                     <div id="right">
-                        <h4>
-                        <asp:DataList ID="DataList1" runat="server" DataSourceID="LinqDataSource1">
-                            <ItemTemplate>
-                                &nbsp;<asp:Label ID="user_firstnameLabel" runat="server" Text='<%# Eval("user_firstname") %>' />
-&nbsp;<asp:Label ID="user_lastnameLabel" runat="server" Text='<%# Eval("user_lastname") %>' />
-                                <br />
-                                <br />
-                            </ItemTemplate>
-                        </asp:DataList>
-                        </h4>
-                        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_firstname, user_lastname)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
-                            <WhereParameters>
-                                <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
-                            </WhereParameters>
-                        </asp:LinqDataSource>
 
-                        <h5>
+                        
+                                <h4>
+                                    
+                                            <asp:DataList ID="DataList1" runat="server" DataSourceID="LinqDataSource1">
+                                    <ItemTemplate>
+                                        &nbsp;<asp:Label ID="user_firstnameLabel" runat="server" Text='<%# Eval("user_firstname") %>' />
+        &nbsp;<asp:Label ID="user_lastnameLabel" runat="server" Text='<%# Eval("user_lastname") %>' />
+                                        <br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList>
 
+                            
+                                </h4>
+                                <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_firstname, user_lastname)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
+                                    <WhereParameters>
+                                        <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
+                                    </WhereParameters>
+                                </asp:LinqDataSource>
 
-
-                            <asp:DataList ID="DataList2" runat="server" DataSourceID="LinqDataSource2">
-                                <ItemTemplate>
-                                    @<asp:Label ID="user_tiwtterLabel" runat="server" Text='<%# Eval("user_tiwtter") %>' />
-                                    <br />
-<br />
-                                </ItemTemplate>
-                            </asp:DataList>
-                            <asp:LinqDataSource ID="LinqDataSource2" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_tiwtter)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
-                                <WhereParameters>
-                                    <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
-                                </WhereParameters>
-                            </asp:LinqDataSource>
                             
 
+                                <h5>
 
 
+
+                                    <asp:DataList ID="DataList2" runat="server" DataSourceID="LinqDataSource2">
+                                        <ItemTemplate>
+                                            @<asp:Label ID="user_tiwtterLabel" runat="server" Text='<%# Eval("user_tiwtter") %>' />
+                                            <br />
+        <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:LinqDataSource ID="LinqDataSource2" runat="server" ContextTypeName="GymCheckinDataContext" EntityTypeName="" Select="new (user_tiwtter)" TableName="tbl_users" Where="user_tiwtter == @user_tiwtter">
+                                        <WhereParameters>
+                                            <asp:SessionParameter Name="user_tiwtter" SessionField="twitter" Type="String" />
+                                        </WhereParameters>
+                                    </asp:LinqDataSource>
+ 
                         </h5>
+
+
+                   
 
                     </div>
                 </div>
