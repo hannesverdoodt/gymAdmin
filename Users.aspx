@@ -55,8 +55,7 @@
                             <img src="images/ajax-loader.gif" />
                         </ProgressTemplate>
                     </asp:UpdateProgress>
-                </ContentTemplate>
-                </asp:UpdatePanel>
+                
             <div class="clear"></div>
 
             <div id="passwords">
@@ -77,7 +76,8 @@
                     <asp:ObjectDataSource ID="Gymmersobj" runat="server" SelectMethod="getAllUserAllowed" TypeName="BLLUser"></asp:ObjectDataSource>
                     
                 </div>
-
+</ContentTemplate>
+                </asp:UpdatePanel>
             </div>
            
            
