@@ -25,6 +25,7 @@
                     <asp:TextBox ID="txtUsername" runat="server" ToolTip="Username" ValidationGroup="Login1"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Required field" ControlToValidate="txtUsername" ForeColor="Red" ValidationGroup="Login1"></asp:RequiredFieldValidator>
                     <br />
+                    <br />
                     <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label><br />
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ToolTip="Password" ValidationGroup="Login1"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required field" ControlToValidate="txtPassword" ForeColor="Red" ValidationGroup="Login1"></asp:RequiredFieldValidator>

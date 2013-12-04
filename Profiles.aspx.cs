@@ -35,12 +35,7 @@ public partial class Profiles : System.Web.UI.Page
 
         try
         {
-
-
-
-
-            HttpContext.Current.Items["imgURL"] = bllprofile.getURL(gebruiker);
-            HttpContext.Current.Items["volnaam"] = "Stijn Schets";
+                bllprofile.getURL(gebruiker);   
         }
 
         catch (Exception)

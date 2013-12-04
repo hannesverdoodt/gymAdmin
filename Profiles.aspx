@@ -46,8 +46,8 @@
                         <img class="img-size" src="#" alt="profile_img"/>
                     </div>
                     <div id="right">
-                        <%= (Context.Items["imgURL"]) %>
-                    </div>
+                        
+                        hier moet de naam komen (voor + achternaam)</div>
                 </div>
                 
             </div>

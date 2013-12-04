@@ -23,7 +23,7 @@
             
                 <asp:LoginView ID="LoginView1" runat="server">
                     <AnonymousTemplate>
-                          <a href="Register.aspx">Register</a> or <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                          <a href="Register.aspx">Register</a> or  <a href="Login.aspx">Login</a>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         You are logged in, welcome
