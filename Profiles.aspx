@@ -119,23 +119,23 @@
 
                      <div id="changeLeft" class="input-group">
                         <div class="pwleft">
-                          <asp:TextBox runat="server" type="text" class="form-control" placeholder="Firstname" id="txtFirstname"/><br />
+                          <asp:TextBox runat="server" class="form-control" placeholder="Firstname" id="txtFirstname"/><br />
                                 
-                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Lastname" id="txtLastname"/><br />
+                          <asp:TextBox runat="server"  class="tekstveld form-control" placeholder="Lastname" id="txtLastname"/><br />
                                 
-                          <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Password" id="txtPassword" TextMode="Password"/><br />
+                          <asp:TextBox runat="server"  class="tekstveld form-control" placeholder="Password" id="txtPassword" TextMode="Password"/><br />
 
-                           <asp:TextBox runat="server" type="text" class="tekstveld form-control" placeholder="Retype password" id="txtPasswordCheck" TextMode="Password"/><br />
+                           <asp:TextBox runat="server"  class="tekstveld form-control" placeholder="Retype password" id="txtPasswordCheck" TextMode="Password"/><br />
                                 
                         </div>
 
                         <div class="pwright_2">
                           
-                           <asp:Button runat="server" id="btnChangeFirstname" CSSclass="btn btn-default" type="button" onclick="btnChangeFirstname_Click" Text="Change Firstname"></asp:Button>
+                           <asp:Button runat="server" id="btnChangeFirstname" CSSclass="btn btn-default"  onclick="btnChangeFirstname_Click" Text="Change Firstname"></asp:Button>
                            
-                           <asp:Button runat="server" id="btnChangeLastname" class="btn btn-default" type="button" onclick="btnChangeLastname_Click" Text="Change Lastname"></asp:Button>
+                           <asp:Button runat="server" id="btnChangeLastname" class="btn btn-default" onclick="btnChangeLastname_Click" Text="Change Lastname"></asp:Button>
                        
-                           <asp:Button runat="server" id="btnChangePasword" class="btn btn-default" type="button" onclick="btnChangePassword_Click" Text=" Change Password "></asp:Button>
+                           <asp:Button runat="server" id="btnChangePasword" class="btn btn-default"  onclick="btnChangePassword_Click" Text=" Change Password "></asp:Button>
                         </div>
 
                     </div>
